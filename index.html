@@ -2475,6 +2475,10 @@ function loadTabs() {
     const tab = new Tab(title, content);
     if (id) tab.id = id;
     tabs.push(tab);
+    const defaultText = "--[[\n Hello, Welcome To NovaX! \n NovaX On Top! ]]";    
+    if (!content) {
+    content = defaultText;
+    }
     
     const tabsContainer = document.getElementById('tabs-container');
     const newTabButton = tabsContainer.querySelector('.new-tab');
